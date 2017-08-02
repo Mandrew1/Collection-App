@@ -15,6 +15,8 @@
 		42286B7C1F2EE32D009EA031 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42286B7A1F2EE32D009EA031 /* LaunchScreen.storyboard */; };
 		42286B871F2EE32D009EA031 /* Collection_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42286B861F2EE32D009EA031 /* Collection_AppTests.swift */; };
 		42286B921F2EE32D009EA031 /* Collection_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42286B911F2EE32D009EA031 /* Collection_AppUITests.swift */; };
+		423CDFCE1F31831800C052F7 /* Circle Button - Red.png in Resources */ = {isa = PBXBuildFile; fileRef = 423CDFCD1F31831800C052F7 /* Circle Button - Red.png */; };
+		4286B2711F31869400D45D9F /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4286B2701F31869400D45D9F /* GameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		42286B8D1F2EE32D009EA031 /* Collection AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Collection AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		42286B911F2EE32D009EA031 /* Collection_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection_AppUITests.swift; sourceTree = "<group>"; };
 		42286B931F2EE32D009EA031 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		423CDFCD1F31831800C052F7 /* Circle Button - Red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Circle Button - Red.png"; path = "../../../../Desktop/Circle Button - Red.png"; sourceTree = "<group>"; };
+		4286B2701F31869400D45D9F /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +103,11 @@
 		42286B6D1F2EE32D009EA031 /* Collection App */ = {
 			isa = PBXGroup;
 			children = (
+				423CDFCD1F31831800C052F7 /* Circle Button - Red.png */,
 				42286B6E1F2EE32D009EA031 /* AppDelegate.swift */,
 				42286B701F2EE32D009EA031 /* ViewController.swift */,
 				42286B721F2EE32D009EA031 /* Main.storyboard */,
+				4286B2701F31869400D45D9F /* GameViewController.swift */,
 				42286B781F2EE32D009EA031 /* Assets.xcassets */,
 				42286B7A1F2EE32D009EA031 /* LaunchScreen.storyboard */,
 				42286B7D1F2EE32D009EA031 /* Info.plist */,
@@ -238,6 +244,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				423CDFCE1F31831800C052F7 /* Circle Button - Red.png in Resources */,
 				42286B7C1F2EE32D009EA031 /* LaunchScreen.storyboard in Resources */,
 				42286B791F2EE32D009EA031 /* Assets.xcassets in Resources */,
 				42286B741F2EE32D009EA031 /* Main.storyboard in Resources */,
@@ -265,6 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4286B2711F31869400D45D9F /* GameViewController.swift in Sources */,
 				42286B771F2EE32D009EA031 /* Collection_App.xcdatamodeld in Sources */,
 				42286B711F2EE32D009EA031 /* ViewController.swift in Sources */,
 				42286B6F1F2EE32D009EA031 /* AppDelegate.swift in Sources */,
@@ -520,6 +528,7 @@
 				42286B981F2EE32D009EA031 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		42286B991F2EE32D009EA031 /* Build configuration list for PBXNativeTarget "Collection AppTests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +537,7 @@
 				42286B9B1F2EE32D009EA031 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		42286B9C1F2EE32D009EA031 /* Build configuration list for PBXNativeTarget "Collection AppUITests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +546,7 @@
 				42286B9E1F2EE32D009EA031 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

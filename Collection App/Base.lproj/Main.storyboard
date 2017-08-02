@@ -1,14 +1,20 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="11j-O7-f4T">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Collection_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -18,9 +24,104 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Xig-ZJ-SVy">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="VMT-zT-6U4">
+                            <connections>
+                                <segue destination="W5R-oD-QXX" kind="show" id="8nB-M7-ErY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1370" y="778"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="59p-uD-rNg">
+            <objects>
+                <viewController id="W5R-oD-QXX" customClass="GameViewController" customModule="Collection_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7xu-J8-ArO"/>
+                        <viewControllerLayoutGuide type="bottom" id="y07-BI-872"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="l6j-p3-h81">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Circle Button - Red.png" translatesAutoresizingMaskIntoConstraints="NO" id="dOr-w3-A2r">
+                                <rect key="frame" x="47" y="84" width="280" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="ltW-fv-XsJ"/>
+                                    <constraint firstAttribute="width" constant="280" id="r6L-R3-rjD"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oj2-UT-aYn">
+                                <rect key="frame" x="48" y="274" width="279" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wtf-Xp-Ivp">
+                                <rect key="frame" x="160" y="347" width="54" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addTapped:" destination="W5R-oD-QXX" eventType="touchUpInside" id="OiJ-Ko-l7H"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Oj2-UT-aYn" secondAttribute="trailing" constant="32" id="9dR-AQ-iUi"/>
+                            <constraint firstItem="Oj2-UT-aYn" firstAttribute="top" secondItem="dOr-w3-A2r" secondAttribute="bottom" constant="40" id="Xmk-Ol-zZD"/>
+                            <constraint firstItem="dOr-w3-A2r" firstAttribute="top" secondItem="7xu-J8-ArO" secondAttribute="bottom" constant="20" id="ZJn-yi-lA9"/>
+                            <constraint firstItem="dOr-w3-A2r" firstAttribute="centerX" secondItem="l6j-p3-h81" secondAttribute="centerX" id="eRb-QY-2bi"/>
+                            <constraint firstItem="Oj2-UT-aYn" firstAttribute="leading" secondItem="l6j-p3-h81" secondAttribute="leadingMargin" constant="32" id="k3x-LX-gWQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="SVf-zY-Yfw">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="camera" id="qn4-4N-eOa">
+                                <connections>
+                                    <action selector="cameraPressed:" destination="W5R-oD-QXX" id="YsC-P8-ztJ"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Photos" id="v27-2z-tbw">
+                                <connections>
+                                    <action selector="photosPressed:" destination="W5R-oD-QXX" id="gXV-YZ-VSu"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="gameImageView" destination="dOr-w3-A2r" id="WmI-X6-Tsm"/>
+                        <outlet property="titleTextField" destination="Oj2-UT-aYn" id="vGY-N5-kFg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="obv-yY-CX5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2501.5999999999999" y="777.66116941529242"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wbP-1K-hEs">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="11j-O7-f4T" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Dlf-4y-wiH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ox8-qc-b0F"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ok8-Gj-mzo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="112.8" y="777.66116941529242"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Circle Button - Red.png" width="149" height="138"/>
+    </resources>
 </document>
