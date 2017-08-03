@@ -121,7 +121,7 @@
                     <navigationItem key="navigationItem" id="Xig-ZJ-SVy">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="VMT-zT-6U4">
                             <connections>
-                                <segue destination="W5R-oD-QXX" kind="show" id="8nB-M7-ErY"/>
+                                <segue destination="W5R-oD-QXX" kind="show" identifier="gameSegue" id="8nB-M7-ErY"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -166,6 +166,15 @@
                                     <action selector="addTapped:" destination="W5R-oD-QXX" eventType="touchUpInside" id="OiJ-Ko-l7H"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jGh-Od-YLc">
+                                <rect key="frame" x="160" y="411" width="54" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="addTapped:" destination="W5R-oD-QXX" eventType="touchUpInside" id="aJN-uY-nri"/>
+                                    <action selector="deleteButtonPressed:" destination="W5R-oD-QXX" eventType="touchUpInside" id="lM7-5h-P5P"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -191,6 +200,8 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="addUpdateButton" destination="wtf-Xp-Ivp" id="BDL-QI-PiS"/>
+                        <outlet property="deleteButton" destination="jGh-Od-YLc" id="SGg-ux-a5G"/>
                         <outlet property="gameImageView" destination="dOr-w3-A2r" id="WmI-X6-Tsm"/>
                         <outlet property="titleTextField" destination="Oj2-UT-aYn" id="vGY-N5-kFg"/>
                     </connections>
